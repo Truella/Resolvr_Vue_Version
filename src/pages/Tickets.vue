@@ -9,35 +9,76 @@
     </div>
 
     <!-- Filters and Actions -->
-    <div class="bg-white rounded-lg shadow-sm p-6 border border-gray-200 mb-8">
-      <div class="flex flex-col sm:flex-row gap-4 items-center justify-between">
-        <div class="flex gap-4">
-          <select
-            v-model="selectedStatus"
-            class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          >
-            <option value="">All Status</option>
-            <option value="open">Open</option>
-            <option value="in_progress">In Progress</option>
-            <option value="closed">Closed</option>
-          </select>
-          
-          <input
-            v-model="searchQuery"
-            type="text"
-            placeholder="Search tickets..."
-            class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-400 focus:outline-none"
-          />
-        </div>
-        
-        <button
-          @click="createNewTicket"
-          class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
-        >
-          + New Ticket
-        </button>
-      </div>
+   <div class="bg-white rounded-lg shadow-sm p-4 mb-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+  <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+    <div class="relative">
+      <label for="status-filter" class="sr-only">
+        Filter by status
+      </label>
+      <select
+        id="status-filter"
+        v-model="selectedStatus"
+        class="w-full sm:w-48 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white appearance-none cursor-pointer"
+        aria-label="Filter tickets by status"
+      >
+        <option value="">All Status</option>
+        <option value="open">Open</option>
+        <option value="in_progress">In Progress</option>
+        <option value="closed">Closed</option>
+      </select>
     </div>
+
+    <div class="relative w-full sm:w-96">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"
+        aria-hidden="true"
+      >
+        <circle cx="11" cy="11" r="8"></circle>
+        <path d="m21 21-4.3-4.3"></path>
+      </svg>
+      <input
+        type="search"
+        placeholder="Search tickets..."
+        v-model="searchQuery"
+        aria-label="Search tickets"
+        class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+  </div>
+
+  <button
+    @click="createNewTicket"
+    class="w-full sm:w-auto flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
+    aria-label="Create new ticket"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="w-5 h-5 mr-2"
+      aria-hidden="true"
+    >
+      <path d="M5 12h14"></path>
+      <path d="M12 5v14"></path>
+    </svg>
+    Create Ticket
+  </button>
+</div>
 
     <!-- Tickets Grid -->
     <div v-if="filteredTickets.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">

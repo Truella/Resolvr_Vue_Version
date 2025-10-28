@@ -1,10 +1,10 @@
 <template>
   <header
-    class="bg-white shadow-sm sticky top-0 z-50"
+			class="bg-white shadow-sm sticky top-0 z-50 h-[10vh] flex items-center "
     role="banner"
     aria-label="Site Header"
   >
-    <div class="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="w-full mx-auto px-16 flex items-center justify-between h-[10vh]">
       <!-- Logo -->
       <Logo />
 

@@ -16,6 +16,7 @@
 
   <!-- Login Form -->
   <form v-else @submit.prevent="handleSubmit" class="flex flex-col gap-4">
+    
     <p v-if="error" class="text-red-600 text-sm">{{ error }}</p>
 
     <label class="flex flex-col text-sm font-medium text-gray-700">

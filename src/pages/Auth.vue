@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :key="route.fullPath">
     <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">
       {{ isLogin ? 'Welcome Back' : 'Create an Account' }}
     </h2>

@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="relative bg-white py-20 px-6 overflow-hidden min-h-[400px]"
+    class="relative  py-20 overflow-hidden min-h-[400px] mx-auto"
     aria-labelledby="about-heading"
   >
     <!-- Decorative circle (bottom-right) -->
@@ -10,10 +10,24 @@
       aria-hidden="true"
     ></div>
 
-    <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       <!-- Left side - Image or illustration -->
-      <div class="flex justify-center">
-        image here
+      <div >
+       <div class="bg-gradient-to-br from-blue-50 to-blue-100 w-full max-w-sm md:max-w-md rounded-3xl h-80 flex items-center justify-center">
+						<svg
+							class="w-32 h-32 text-blue-600"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+							/>
+						</svg>
+					</div>
       </div>
 
       <!-- Right side - Text content -->
@@ -22,13 +36,13 @@
           id="about-heading"
           class="text-3xl md:text-4xl font-bold text-gray-800 mb-4"
         >
-          About TicketFlow
+          About Resolvr.
         </h2>
 
         <p class="text-gray-600 leading-relaxed mb-6">
-          TicketFlow is your all-in-one platform for managing tickets, tasks,
+          Resolvr is your all-in-one platform for managing tickets, tasks,
           and support requests with ease. Whether you're a small team or a
-          growing company, TicketFlow helps you stay organized, resolve issues
+          growing company, Resolvr helps you stay organized, resolve issues
           faster, and track progress effortlessly — all from one dashboard.
         </p>
 
