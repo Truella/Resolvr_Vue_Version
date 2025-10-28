@@ -4,7 +4,7 @@
     role="banner"
     aria-label="Site Header"
   >
-    <div class="w-full mx-auto px-16 flex items-center justify-between h-[10vh]">
+    <div class="w-full mx-auto px-8 md:px-16 flex items-center justify-between h-[10vh]">
       <!-- Logo -->
       <Logo />
 
@@ -19,8 +19,8 @@
         :aria-expanded="menuOpen"
         aria-controls="main-navigation"
       >
-        <X v-if="menuOpen" :size="24" />
-        <Menu v-else :size="24" />
+        <X v-if="menuOpen" :size="32" />
+        <Menu v-else :size="32" />
       </button>
     </div>
   </header>

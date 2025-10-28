@@ -2,7 +2,8 @@
   <div>
     <!-- Header -->
     <div class="mb-8">
-      <h1 class="text-3xl font-bold text-gray-900 mb-2">Dashboard</h1>
+      <h1 class="text-3xl font-bold text-gray-900 mb-2 hidden md:block">Dashboard</h1>
+      <h1 class="text-3xl font-medium text-gray-900 mb-2 md:hidden">Welcome, {{ user.name }}</h1>
       <p class="text-gray-600">
         Overview of your ticket management system
       </p>
@@ -86,6 +87,9 @@
 import { ref, computed, onMounted } from 'vue'
 import { BarChart3, Ticket, CheckCircle, Clock, AlertCircle, ArrowRight } from 'lucide-vue-next'
 import { useTicketsStore } from '../stores/tickets'
+import { useAuthStore } from '../stores/auth'
+
+import { storeToRefs } from "pinia";
 
 const ticketsStore = useTicketsStore()
 
@@ -160,8 +164,9 @@ const getStatusColor = (status) => {
     default:
       return "bg-red-500"
   }
-}
-
+} 
+const authStore = useAuthStore();
+const { user } = storeToRefs(authStore);
 onMounted(() => {
   // Load tickets to update stats
   ticketsStore.loadTickets()

@@ -1,7 +1,7 @@
 <template>
   <section
     id="about"
-    class="relative  py-20 overflow-hidden min-h-[400px] mx-auto"
+    class="relative  py-20 overflow-hidden min-h-[400px] mx-auto w-[90vw] md:w-full"
     aria-labelledby="about-heading"
   >
     <!-- Decorative circle (bottom-right) -->

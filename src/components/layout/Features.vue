@@ -1,7 +1,7 @@
 <template>
 	<section
 		id="features"
-		class="bg-white pb-20 text-center min-h-[400px]"
+		class="bg-white py-20 text-center min-h-[400px] w-[80vw] md:w-full mx-auto"
 		aria-labelledby="features-heading"
 	>
 		<div class="max-w-[1200px] mx-auto">

@@ -8,7 +8,7 @@
     class="md:static md:bg-transparent md:flex-row md:shadow-none md:py-0"
     aria-label="Main Navigation"
   >
-    <ul class="flex flex-col md:flex-row gap-6 md:gap-8 text-gray-700 font-medium text-base">
+    <ul class="w-[80%] flex flex-col justify-center items-center md:flex-row gap-6 md:gap-8 text-gray-700 font-medium text-base">
       <li>
         <a
           href="#features"
@@ -38,11 +38,11 @@
           Login
         </router-link>
       </li>
-      <li>
+      <li class="w-full flex justify-center">
         <router-link
           to="/auth/signup"
           @click="onClose"
-          class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 transition"
+          class="bg-blue-600 w-full text-center text-white px-4 py-2 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 transition"
         >
           Get Started
         </router-link>
