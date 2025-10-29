@@ -44,7 +44,7 @@ const routes = [
 
 // Create router with hash history for GitHub Pages
 const router = createRouter({
-	history: createWebHashHistory(), // ✅ key fix
+	history: createWebHashHistory(), 
 	routes,
 });
 

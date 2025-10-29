@@ -8,7 +8,7 @@
     class="md:static md:bg-transparent md:flex-row md:shadow-none md:py-0"
     aria-label="Main Navigation"
   >
-    <ul class="w-[80%] flex flex-col justify-center items-center md:flex-row gap-6 md:gap-8 text-gray-700 font-medium text-base">
+    <ul class="w-[80%] md:w-full flex flex-col justify-center items-center md:flex-row gap-6 md:gap-8 text-gray-700 font-medium text-base">
       <li>
         <a
           href="#features"

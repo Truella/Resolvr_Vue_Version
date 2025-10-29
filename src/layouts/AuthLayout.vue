@@ -15,13 +15,25 @@
 
     <!-- Auth Form Container -->
     <div class="relative z-10 w-[90vw] max-w-md bg-white shadow-lg rounded-2xl px-8 py-10 md:px-10">
-      <a href="/" class="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition mb-4">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                    Back to Home
-                </a>
-                
+      <router-link
+    :to="{ name: 'home' }"
+    class="inline-flex items-center gap-1 text-sm text-gray-600 hover:text-blue-600 transition mb-4"
+  >
+    <svg
+      class="w-4 h-4"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M15 19l-7-7 7-7"
+      ></path>
+    </svg>
+    Back to Home
+  </router-link>          
       <router-view />
     </div>
   </section>
